@@ -104,6 +104,7 @@ nav.active .menu ul li a{
     gap: 58px;
     padding: 10px 16px;
     background: no-repeat center url("../images/mobile/header-illsutration-mobile.svg");
+    background-size: cover;
 }
 
 .intro h1:nth-child(1) {
@@ -156,6 +157,8 @@ nav.active .menu ul li a{
 .projects-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
 }
 .project-block {
@@ -299,13 +302,23 @@ nav.active .menu ul li a{
     font-weight: 400px;
 }
 
-.fly-1 {
+.fly-1-desktop {
+    display: none;
+}
+
+.fly-2-desktop {
+    display: none;
+}
+
+.fly-1,
+.fly-1-desktop {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.fly-2 {
+.fly-2,
+.fly-2-desktop{
     position: absolute;
     bottom: 40px;
     left: 0;
@@ -404,10 +417,17 @@ form textarea {
 }
 
 
-#contact img {
+.illus-1 {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.illus-2,
+.illus-3,
+.illus-4 {
+    position: absolute;
+    display: none;
 }
 
 footer {
@@ -422,3 +442,158 @@ footer p {
     font-size: 20px;
     color: #42526E;
 }
+
+/* desktop */
+@media (min-width: 768px) {
+    .project-block {
+        width: 300px;
+    }
+
+    #contact {
+        padding: 20px 16px;
+    }
+
+    .illus-2,
+    .illus-3,
+    .illus-4{
+        z-index: -1;
+    }
+
+    .illus-2{
+        height: 300px;
+    }
+
+    .illus-4{
+        height: 200px;
+    }
+}
+
+@media (min-width: 414px) {
+    .project-block {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 720px) {
+    
+    #hero {
+        padding-bottom: 200px;
+        background: no-repeat center url("../images/desktop/Header-llustration-desktop.svg");
+        height: 1000px;
+        justify-content: center;
+    }
+
+    .hero-p {
+        max-width: 750px;
+    }
+
+    nav {
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    
+    nav .wlc,
+    nav .fa-bars {
+        display: none;
+    }
+
+    .menu {
+        display: initial;
+    }
+
+    .menu .close {
+        display: none;
+    }
+
+    .menu ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: #344563;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px 12px;
+    }
+
+    #recents {
+        margin-top: 80px;
+    }
+
+    .projects-container {
+        flex-direction: initial;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #abt p {
+        font-weight: 400;
+        max-width: 750px;
+    }
+
+    .fly-1-desktop,
+    .fly-2-desktop {
+        display: initial;
+        z-index: -1;
+    }
+
+    .fly-1,
+    .fly-2 {
+        display: none;
+    }
+
+    .tools-container {
+        flex-direction: initial;
+        justify-content: center;
+    }
+
+    .tools-block {
+        width: 369px;
+    }
+
+    #contact {
+        flex-direction: initial;
+        padding: 20px 60px;
+        height: 600px;
+    }
+
+    #contact h1 {
+        flex: 1;
+    }
+
+    #contact form {
+        flex: 1;
+    }
+
+    .illus-1{
+        display: none;
+    }
+
+    .illus-2 {
+        display: initial;
+        bottom: 0;
+        right: 0;
+    }
+
+    .illus-3 {
+        display: initial;
+        bottom: 0;
+        left: 150px;
+    }
+
+    .illus-4 {
+        display: initial;
+        bottom: 0;
+        left: 0;
+    }
+}
+
