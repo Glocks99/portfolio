@@ -24,7 +24,7 @@ h1 {
     letter-spacing: 1.1px;
 }
 
-button {
+button, .button {
     color: #fff;
     background-color: #1E488F;
     padding: 12px;
@@ -219,6 +219,7 @@ nav.active .menu ul li a{
     background-color: rgba(0,0,0,0.5);
     inset: 0 0 0 0;
     z-index: 10;
+    overflow: auto;
     padding: 10px;
 }
 
@@ -275,14 +276,10 @@ nav.active .menu ul li a{
 }
 
 .cont div:nth-child(4) a {
-    color: #fff;
     text-decoration: none;
-    background-color: #1E488F;
-    border: none;
-    border-radius: 8px;
     display: flex;
     align-items: center;
-    padding: 12px;
+    gap: 6px;
     cursor: pointer;
 }
 
@@ -566,10 +563,26 @@ footer p {
         bottom: 0;
         left: 0;
     }
+
+    .modals {
+        padding: 10px 200px;
+    }
 }
 
-@media (min-width: 1440px){
+@media (min-width: 1024px){
     .projects-container {
         grid-template-columns: repeat(3, auto);
+    }
+
+    .modals {
+        padding: 10px 280px;
+    }
+
+    #contact {
+        padding: 20px 16px;
+    }
+
+    .illus-2 {
+        z-index: -1;
     }
 }

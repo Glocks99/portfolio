@@ -28,4 +28,12 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#hero button").addEventListener("click", e => {
         window.location.href = "#recents"
     })
+
+    window.addEventListener("scroll", e => {
+        if (window.scrollY > 178) {
+            document.querySelector(".menu ul").style = "display: none"
+        }else {
+            document.querySelector(".menu ul").style = "display: flex"
+        }
+    })
 })
