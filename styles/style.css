@@ -33,6 +33,7 @@ button, .button {
     border-radius: 4px;
     font-size: 17px;
     font-weight: 500;
+    text-decoration: none;
 }
 
 body {
@@ -169,6 +170,7 @@ nav.active .menu ul li a{
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .info-image {
@@ -230,7 +232,16 @@ nav.active .menu ul li a{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 16px;
+}
+
+.deets {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.deets::-webkit-scrollbar{
+    display: none;
 }
 
 .cont div:nth-child(1) {
@@ -238,7 +249,7 @@ nav.active .menu ul li a{
     background-size: cover;
     color: #fff;
     position: relative;
-    height: 220px;
+    min-height: 220px;
     border-radius: 8px;
 }
 
@@ -247,6 +258,7 @@ nav.active .menu ul li a{
     top: 15px;
     right: 25px;
     cursor: pointer;
+    color: #3A4A42;
 }
 
 .cont div:nth-child(2) h1{
@@ -456,6 +468,10 @@ footer p {
         max-width: 750px;
     }
 
+    .project-block {
+        width: 340px;
+    }
+
     nav {
         justify-content: center;
         position: fixed;
@@ -576,6 +592,10 @@ footer p {
 
     .modals {
         padding: 10px 280px;
+    }
+
+    .project-block {
+        width: 310px;
     }
 
     #contact {
