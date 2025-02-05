@@ -69,6 +69,7 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>
             `
             document.querySelector(".modals").style = "display: initial"
+            document.querySelector("body").style = "overflow: hidden"
             document.querySelector(".cont div:nth-child(1)").style = `background-image: url("${recents[id].image}")`
         }
     })
@@ -76,6 +77,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".modals").addEventListener("click", e => {
         if(e.target.className.includes("fa-x")){
             document.querySelector(".modals").style = "display: none"
+            document.querySelector("body").style = "overflow: initial"
         }
     })
 

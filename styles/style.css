@@ -218,11 +218,12 @@ nav.active .menu ul li a{
 .modals {
     display: none;
     position: fixed;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(124, 124, 124, 0.5);
     inset: 0 0 0 0;
     z-index: 10;
     overflow: auto;
     padding: 10px;
+    backdrop-filter: blur(10px);
 }
 
 .cont {
@@ -259,6 +260,9 @@ nav.active .menu ul li a{
     right: 25px;
     cursor: pointer;
     color: #3A4A42;
+    padding: 10px;
+    background-color: #DFE1E6;
+    border-radius: 5px;
 }
 
 .cont div:nth-child(2) h1{
