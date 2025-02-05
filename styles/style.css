@@ -24,7 +24,7 @@ h1 {
     letter-spacing: 1.1px;
 }
 
-button {
+button, .button {
     color: #fff;
     background-color: #1E488F;
     padding: 12px;
@@ -33,6 +33,7 @@ button {
     border-radius: 4px;
     font-size: 17px;
     font-weight: 500;
+    text-decoration: none;
 }
 
 body {
@@ -164,11 +165,30 @@ nav.active .menu ul li a{
 .project-block {
     border: 1px solid rgba(0,0,0,0.1);
     height: 474px;
-    background-color: #EBEFF4;
+    /* background-color: #EBEFF4; */
     border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: all .3s linear;
+    width: 100%;
+    position: relative;
+}
+
+.info-image img{
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    z-index: -1;
+}
+
+.project-block:hover {
+    transform: translateY(-10px);
+}
+
+.project-block:hover button{
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(124, 124, 124, 0.5);
 }
 
 .info-image {
@@ -216,10 +236,12 @@ nav.active .menu ul li a{
 .modals {
     display: none;
     position: fixed;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(124, 124, 124, 0.5);
     inset: 0 0 0 0;
     z-index: 10;
+    overflow: auto;
     padding: 10px;
+    backdrop-filter: blur(10px);
 }
 
 .cont {
@@ -229,7 +251,16 @@ nav.active .menu ul li a{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 16px;
+}
+
+.deets {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.deets::-webkit-scrollbar{
+    display: none;
 }
 
 .cont div:nth-child(1) {
@@ -237,7 +268,7 @@ nav.active .menu ul li a{
     background-size: cover;
     color: #fff;
     position: relative;
-    height: 220px;
+    min-height: 220px;
     border-radius: 8px;
 }
 
@@ -246,6 +277,10 @@ nav.active .menu ul li a{
     top: 15px;
     right: 25px;
     cursor: pointer;
+    color: #3A4A42;
+    padding: 10px;
+    background-color: #DFE1E6;
+    border-radius: 5px;
 }
 
 .cont div:nth-child(2) h1{
@@ -275,14 +310,10 @@ nav.active .menu ul li a{
 }
 
 .cont div:nth-child(4) a {
-    color: #fff;
     text-decoration: none;
-    background-color: #1E488F;
-    border: none;
-    border-radius: 8px;
     display: flex;
     align-items: center;
-    padding: 12px;
+    gap: 6px;
     cursor: pointer;
 }
 
@@ -459,6 +490,10 @@ footer p {
         max-width: 750px;
     }
 
+    .project-block {
+        width: 340px;
+    }
+
     nav {
         justify-content: center;
         position: fixed;
@@ -566,10 +601,30 @@ footer p {
         bottom: 0;
         left: 0;
     }
+
+    .modals {
+        padding: 10px 200px;
+    }
 }
 
-@media (min-width: 1440px){
+@media (min-width: 1024px){
     .projects-container {
         grid-template-columns: repeat(3, auto);
+    }
+
+    .modals {
+        padding: 10px 280px;
+    }
+
+    .project-block {
+        width: 310px;
+    }
+
+    #contact {
+        padding: 20px 16px;
+    }
+
+    .illus-2 {
+        z-index: -1;
     }
 }
