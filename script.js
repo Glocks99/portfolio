@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
     recents.forEach((block,i) => {
         recentBlockHTML += `
             <div class="project-block">
-                <div class="info-image"></div>
+                <div class="info-image"><img src="${block.image}" alt="" /></div>
                 <div class="project-info">
                     <h3>${block.title}</h3>
 
