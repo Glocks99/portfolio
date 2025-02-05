@@ -165,12 +165,30 @@ nav.active .menu ul li a{
 .project-block {
     border: 1px solid rgba(0,0,0,0.1);
     height: 474px;
-    background-color: #EBEFF4;
+    /* background-color: #EBEFF4; */
     border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: all .3s linear;
     width: 100%;
+    position: relative;
+}
+
+.info-image img{
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    z-index: -1;
+}
+
+.project-block:hover {
+    transform: translateY(-10px);
+}
+
+.project-block:hover button{
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(124, 124, 124, 0.5);
 }
 
 .info-image {
