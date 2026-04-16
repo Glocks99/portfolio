@@ -4,7 +4,6 @@ window.addEventListener("DOMContentLoaded", () => {
         {
             title: "Student Budget Tracker",
             tags: ["React","NodeJS","Express","MongoDB","Vercel","Render"],
-            image: "./images/recents/sbt.webp",
             description: "Student Budget Tracker (SBT) is a web application designed to help students efficiently manage their income and expenses. It features a user-friendly dashboard for tracking transactions, authentication capabilities (signup, login, password reset, and email verification), and a secure backend powered by Node.js and Express. The app is deployed on Vercel (front end) and Render (backend), ensuring seamless accessibility. With a minimalistic design and real-time data storage using MongoDB, SBT simplifies personal finance management for students.",
             live: "https://student-budget-tracker.vercel.app/",
             source: "https://github.com/Glocks99/Student-Budget-Tracker"
@@ -12,7 +11,6 @@ window.addEventListener("DOMContentLoaded", () => {
         {
             title: "Music Player",
             tags: ["html","css","javascript","vercel"],
-            image: "./images/recents/music.png",
             description: "This is a fully functional music player built using HTML, CSS, and JavaScript. It allows users to play, pause, and navigate between songs with next and previous controls. The player also features a filtering system for searching songs, a responsive UI for a seamless experience across devices, and additional functionalities such as volume control and progress tracking. With a clean design and smooth animations, this project showcases interactive web development skills.",
             live: "https://music-player-kappa-vert.vercel.app/",
             source: "https://github.com/Glocks99/music-player"
@@ -20,10 +18,16 @@ window.addEventListener("DOMContentLoaded", () => {
         {
             title: "Adv Todo List",
             tags: ["html","css","javascript","Vercel"],
-            image: "./images/recents/todo.png",
             description: "The Advanced To-Do List is a feature-rich task management web app designed for better productivity. It includes functionalities such as adding, editing, and deleting tasks, marking tasks as completed, filtering tasks by status (pending/completed), and setting due dates. The app uses local storage to save tasks persistently and features a sleek, responsive UI for a smooth user experience. With its intuitive design and enhanced functionality, this project demonstrates advanced JavaScript handling and UI/UX design skills.",
-            live: "https://adv-todo-list.vercel.app/",
-            source: "https://github.com/Glocks99/Adv-TodoList"
+            live: "https://laforge-comics.vercel.app/",
+            source: "https://github.com/Glocks99/LaforgeComics"
+        },
+        {
+            title: "Adv Todo List",
+            tags: ["html","css","javascript","Vercel"],
+            description: "The Advanced To-Do List is a feature-rich task management web app designed for better productivity. It includes functionalities such as adding, editing, and deleting tasks, marking tasks as completed, filtering tasks by status (pending/completed), and setting due dates. The app uses local storage to save tasks persistently and features a sleek, responsive UI for a smooth user experience. With its intuitive design and enhanced functionality, this project demonstrates advanced JavaScript handling and UI/UX design skills.",
+            live: "https://reality-stars.vercel.app/",
+            source: "https://github.com/Glocks99/reality-stars"
         },
     ]
 
@@ -107,15 +111,19 @@ window.addEventListener("DOMContentLoaded", () => {
     recents.forEach((block,i) => {
         recentBlockHTML += `
             <div class="project-block">
-                <div class="info-image"><img src="${block.image}" alt="" /></div>
-                <div class="project-info">
-                    <h3>${block.title}</h3>
-
-                    <div class="tags">
-                        ${block.tags.map(item => `<p>${item}</p>`).join("")}
+                <div>
+                    <div class="frame-container">
+                        <iframe src="${block.live}" title="${block.title}" loading="lazy" frameborder="0"></iframe>
                     </div>
+                    <div class="project-info">
+                        <h6>Tools</h6>
 
-                    <button data-id="${i}">See Project</button>
+                        <div class="tags">
+                            ${block.tags.map(item => `<p>${item}</p>`).join("")}
+                        </div>
+
+                        <button data-id="${i}">See Project</button>
+                    </div>
                 </div>
             </div>
         `
